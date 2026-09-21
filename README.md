@@ -1,8 +1,12 @@
 # agent-rules
 
-My coding-agent collaboration rules, kept in a single [AGENTS.md](AGENTS.md) — behavioral constraints for AI coding agents (ZCode / Claude Code / Copilot Workspace, …), placed at the agent's instruction entry point so they apply to every session.
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+
+My coding-agent collaboration rules, kept in a single [AGENTS.md](AGENTS.md) — behavioral constraints for AI coding agents (Claude Code / Codex / Cursor / ZCode / Copilot, …), placed at the agent's instruction entry point so they apply to every session.
 
 The idea in one line: **every rule is a real constraint, so keep them few — verification and questions scale with the blast radius of the action.**
+
+> **Note:** the rules are written in Chinese, the language I work in. The file is plain Markdown — translate it, or keep only the parts that fit your workflow.
 
 ## Contents
 
@@ -26,9 +30,17 @@ Four sections, seven collaboration principles.
 
 ## Usage
 
-1. Copy `AGENTS.md` to your global instruction file (e.g. `~/.zcode/AGENTS.md`), or into a project root — project-level rules win.
+1. Copy `AGENTS.md` to your global instruction file (e.g. `~/.zcode/AGENTS.md` or `~/.claude/CLAUDE.md`), or into a project root — project-level rules win.
 2. The local-machine and boundary sections carry author-specific items (privilege escalation, temp paths, Motrix). Replace them with your own reality; where a statement is machine-specific, write it as "probe first, degrade if missing".
 3. Rules you won't enforce dilute the ones you will. Cut them.
+
+## Related
+
+Other takes on the same problem, if you want something different:
+
+- [agentsmd/agents.md](https://github.com/agentsmd/agents.md) — the open AGENTS.md format this file follows.
+- [steipete/agent-rules](https://github.com/steipete/agent-rules) — a much larger personal ruleset.
+- [ciembor/agent-rules-books](https://github.com/ciembor/agent-rules-books) — rules distilled from classic engineering books.
 
 ## License
 

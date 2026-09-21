@@ -2,11 +2,18 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
-My coding-agent collaboration rules, kept in a single [AGENTS.md](AGENTS.md) — behavioral constraints for AI coding agents (Claude Code / Codex / Cursor / ZCode / Copilot, …), placed at the agent's instruction entry point so they apply to every session.
+My coding-agent collaboration rules, kept in a single [AGENTS.md](AGENTS.md) — behavioral constraints for AI coding agents, **written for [ZCode](https://zcode.z.ai/) and tuned to a Linux desktop**.
 
 The idea in one line: **every rule is a real constraint, so keep them few — verification and questions scale with the blast radius of the action.**
 
 > **Note:** the rules are written in Chinese, the language I work in. The file is plain Markdown — translate it, or keep only the parts that fit your workflow.
+
+## What is platform-specific
+
+Everything else is agent- and OS-agnostic; these two parts are not:
+
+- **ZCode** — principle 1 is built around ZCode's asking tool (`AskUserQuestion`), including the trap that text written before the question gets collapsed and never read. Retarget it if your agent asks differently.
+- **Linux desktop** — the `本机操作约定（Linux）` section: downloads through Motrix, `pkexec` for root commands, batch artifacts under `/tmp/<task>/`, and a safer process-killing convention. Drop or rewrite it on macOS or Windows.
 
 ## Contents
 

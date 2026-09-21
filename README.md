@@ -41,6 +41,16 @@
 2. 「本机操作约定」与「边界」两节含作者本机的条目（提权方式、临时路径、Motrix）。移植时替换成你自己的实况；涉及具体机器的表述写成「先探测、缺失时降级」。
 3. 规则贵精不贵多——留不下的规则只会稀释真正重要的那些。
 
+## 配套工具
+
+规则正文依赖下面这些东西。前两项是公开项目，链接直接给官方来源；第三项是 Linux 提权，脚本随本仓库一起提供。
+
+- **ZCode**——规则就是为它写的，原则 1 依赖它的提问工具。官网 <https://zcode.z.ai/>，源码 <https://github.com/zai-org/ZCode>。
+- **Motrix**——「下载统一走 Motrix」那节的工具本体，一个跨平台下载器。官网 <https://motrix.app/>，源码 <https://github.com/agalwood/Motrix>。规则里提到的「motrix skill」是作者本机的技能文件，**没有随本仓库发布**；读者可以自己写一份，或直接查 Motrix 自己的接口说明。
+- **polkit 免密提权**——`pkexec` 默认每次都弹密码，无人值守的脚本会卡死在那里。本仓库带一个脚本，把 polkit 的**通用 action** 授权给指定组，让 `pkexec bash -c '...'` 免密可用：[`companion/polkit-nopasswd.sh`](companion/polkit-nopasswd.sh)。先用 `--dry-run` 看它打算写什么，`--uninstall` 撤回。polkit 自身文档见 <https://polkit.pages.freedesktop.org/polkit/>。
+
+⚠️ 那个 pkexec 脚本等于让指定组的成员**免密拿到 root**。这正是它的用途，也正是它的风险——只在确实需要无人值守 root 的机器上用，并且把那个组保持得尽量小。
+
 ## 相关
 
 同一问题上的其它做法，可供对比：
@@ -93,6 +103,16 @@ Four sections, seven collaboration principles.
 1. Copy `AGENTS.md` to your global instruction file (e.g. `~/.zcode/AGENTS.md` or `~/.claude/CLAUDE.md`), or into a project root — project-level rules win.
 2. The local-machine and boundary sections carry author-specific items (privilege escalation, temp paths, Motrix). Replace them with your own reality; where a statement is machine-specific, write it as "probe first, degrade if missing".
 3. Rules you won't enforce dilute the ones you will. Cut them.
+
+### Companion tools
+
+The rules lean on these. The first two are public projects — links go to the official sources; the third is a Linux privilege-escalation setup, and the script ships with this repository.
+
+- **ZCode** — the agent these rules were written for; principle 1 relies on its asking tool. Site <https://zcode.z.ai/>, source <https://github.com/zai-org/ZCode>.
+- **Motrix** — the cross-platform download manager behind the "downloads go through Motrix" convention. Site <https://motrix.app/>, source <https://github.com/agalwood/Motrix>. The "motrix skill" the rules mention is an author-local skill file and **is not published here**; write your own, or read Motrix's own interface directly.
+- **Passwordless pkexec** — `pkexec` asks for a password every time, which stalls unattended scripts. This repository ships a script that grants polkit's **generic action** to a group, so `pkexec bash -c '...'` works unattended: [`companion/polkit-nopasswd.sh`](companion/polkit-nopasswd.sh). Run it with `--dry-run` first to see what it would write, and `--uninstall` to revoke. Polkit's own documentation: <https://polkit.pages.freedesktop.org/polkit/>.
+
+⚠️ The pkexec script gives every member of the chosen group passwordless root. That is the point, and the risk — use it only where unattended root is genuinely required, and keep that group small.
 
 ### Related
 

@@ -12,7 +12,7 @@
 
 其余内容与代理、操作系统无关，只有这两处例外：
 
-- **ZCode**——原则 1 围绕 ZCode 的提问工具（`AskUserQuestion`）写成，包含「写在 ASK 之前的正文会被折叠、等于没交付」这个坑。换一个提问机制不同的代理，这条需要重写。
+- **ZCode**——原则 1 围绕 ZCode 的提问工具（`AskUserQuestion`）写成，包含「写在 ASK 之前的正文会被折叠、等于没交付」这个坑。换一个提问机制不同的代理，这条需要重写。配图守则的渲染事实（对话内 mermaid 与本地绝对路径图片直接渲染）也是 ZCode 桌面客户端实测，换代理先验证。
 - **Linux 桌面**——`本机操作约定（Linux）` 整节：走 Motrix 下载、用 `pkexec` 提权、批处理产物放 `/tmp/<task>/`，以及更安全的杀进程约定。macOS 或 Windows 上请删除或重写。
 
 ## 内容
@@ -29,7 +29,7 @@
 6. **同一问题同类失败 ≥3 次就换方案**——不做第四次微修；换方案前先报告已试过的失败路径。
 7. **故障处置**——出故障就停手，如实报告现状、影响面与回滚路径；能安全回滚的先回滚。
 
-**工作偏好**：语言与文风约定、仅在复用场景明确时才做通用化、最终输出先结论后细节，以及涉及操作时的交付标准（可复制命令 + 已知坑 + 验收标准 + 回滚预案），未经实跑的命令明确标注。
+**工作偏好**：语言与文风约定、面向人的说明文字按 ASD-STE100 写到八成、配图守则（结构图用 mermaid、任意来源图片积极内嵌、删减法与复杂度预算）、仅在复用场景明确时才做通用化、最终输出先结论后细节，以及涉及操作时的交付标准（可复制命令 + 已知坑 + 验收标准 + 回滚预案），未经实跑的命令明确标注。
 
 **本机操作约定（Linux）**：Motrix 下载、`/tmp/<task>/` 暂存、安全的杀进程约定、`pkexec` 提权及其免密范围。
 
@@ -75,7 +75,7 @@ The idea in one line: **every rule is a real constraint, so keep them few — ve
 
 Everything else is agent- and OS-agnostic; these two parts are not:
 
-- **ZCode** — principle 1 is built around ZCode's asking tool (`AskUserQuestion`), including the trap that text written before the question gets collapsed and never read. Retarget it if your agent asks differently.
+- **ZCode** — principle 1 is built around ZCode's asking tool (`AskUserQuestion`), including the trap that text written before the question gets collapsed and never read. Retarget it if your agent asks differently. The diagram rules also assume ZCode's desktop client, which renders Mermaid blocks and local absolute-path images inline — verify before porting.
 - **Linux desktop** — the `本机操作约定（Linux）` section: downloads through Motrix, `pkexec` for root commands, batch artifacts under `/tmp/<task>/`, and a safer process-killing convention. Drop or rewrite it on macOS or Windows.
 
 ### Contents
@@ -92,7 +92,7 @@ Four sections, seven collaboration principles.
 6. **Three same-class failures → change the approach** — not a fourth micro-fix; report the failed paths first.
 7. **Incident handling** — stop, report state / blast radius / rollback path honestly, roll back when that is safe.
 
-**工作偏好 — Work preferences**: language conventions (Chinese dialogue, English for outward-facing artifacts), design for reuse only when the reuse case is concrete, conclusion-first output, and a delivery checklist for anything actionable — copy-pasteable commands, known pitfalls, acceptance criteria, rollback plan — with unverified commands marked as such.
+**工作偏好 — Work preferences**: language conventions (Chinese dialogue, English for outward-facing artifacts), human-facing prose at 80% of ASD-STE100, diagram rules (Mermaid for structure, images from any source embedded actively, a deletion-first discipline with a complexity budget), design for reuse only when the reuse case is concrete, conclusion-first output, and a delivery checklist for anything actionable — copy-pasteable commands, known pitfalls, acceptance criteria, rollback plan — with unverified commands marked as such.
 
 **本机操作约定（Linux）— Local machine conventions**: downloads through Motrix rather than curl/wget, batch and audit artifacts under `/tmp/<task>/`, safe process killing, and root commands through `pkexec` instead of handing the user terminal commands.
 

@@ -29,6 +29,12 @@
 - When the final output involves operations, it must include: copy-pasteable commands + acceptance criteria; for high-blast-radius operations add known pitfalls + a rollback plan; commands not actually run are marked as unverified.
 - Design artifacts for the future: **only when the reuse case is concrete**, actively explore generalizing and tooling — produce reusable code artifacts and lower the cost of later changes.
 
+## Tool discipline
+
+- **All file writes go through Write/Edit-type tools**: Write for new files, Edit for changes. Bash is for reading, searching, running and process management only; redirection (`>`/`>>`), heredocs, `tee`, in-place substitution (`sed -i`) and writing files from within scripts all count as "writing with Bash" — don't. The reason: writes become auditable, diffable and permission-prompted, and are immune to quoting and escaping issues.
+- Boundary: `git mv`/`git rm`/`mv` — version-control operations and file moves — don't count as "content writes" and may use Bash; after moving, still read back to confirm.
+- Batch edits to structured data (many same-shaped files, the same change repeated) prefer Edit one by one; if a script is genuinely needed, write the script to disk with Write first and then run it, so it stays reviewable.
+
 ## Local machine conventions (Linux)
 
 - Downloads go through Motrix, not curl/wget for large files (syntax in the motrix skill); start the desktop app with `motrix open` if it isn't running. Probing an HTTP API or fetching small text can still use curl.

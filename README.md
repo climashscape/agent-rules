@@ -29,9 +29,9 @@
 6. **同一问题同类失败 ≥3 次就换方案**——不做第四次微修；换方案前先报告已试过的失败路径。
 7. **故障处置**——出故障就停手，如实报告现状、影响面与回滚路径；能安全回滚的先回滚。
 
-**工作偏好**：语言与文风约定、面向人的说明文字按 ASD-STE100 写到八成、配图守则（结构图用 mermaid、任意来源图片积极内嵌、删减法与复杂度预算）、仅在复用场景明确时才做通用化、最终输出先结论后细节，以及涉及操作时的交付标准（可复制命令 + 已知坑 + 验收标准 + 回滚预案），未经实跑的命令明确标注。
+**工作偏好**：语言与文风约定、面向人的说明文字按 ASD-STE100 写到八成、配图守则（结构图用 mermaid、任意来源图片积极内嵌、删减法与复杂度预算）、仅在复用场景明确时才做通用化、最终输出先结论后细节，以及涉及操作时的交付标准（可复制命令 + 验收标准；影响面大再加已知坑 + 回滚预案），未经实跑的命令明确标注。
 
-**本机操作约定（Linux）**：Motrix 下载、`/tmp/<task>/` 暂存、安全的杀进程约定、`pkexec` 提权及其免密范围。
+**本机操作约定（Linux）**：Motrix 下载、本地 jev 判断栈、`/tmp/<task>/` 暂存、安全的杀进程约定、`pkexec` 提权及其免密范围，以及不许绕过的门禁（pre-push 门禁与安全钩子拦截）。
 
 **边界**：隐私与数据主权（含「读入即外发」——凭据一进上下文就随请求发往模型提供方，故只打印键名或哈希、不打印值）、署名约定、不把环境相关的断言写进要分享的产物。
 
@@ -92,9 +92,9 @@ Four sections, seven collaboration principles.
 6. **Three same-class failures → change the approach** — not a fourth micro-fix; report the failed paths first.
 7. **Incident handling** — stop, report state / blast radius / rollback path honestly, roll back when that is safe.
 
-**工作偏好 — Work preferences**: language conventions (Chinese dialogue, English for outward-facing artifacts), human-facing prose at 80% of ASD-STE100, diagram rules (Mermaid for structure, images from any source embedded actively, a deletion-first discipline with a complexity budget), design for reuse only when the reuse case is concrete, conclusion-first output, and a delivery checklist for anything actionable — copy-pasteable commands, known pitfalls, acceptance criteria, rollback plan — with unverified commands marked as such.
+**工作偏好 — Work preferences**: language conventions (Chinese dialogue, English for outward-facing artifacts), human-facing prose at 80% of ASD-STE100, diagram rules (Mermaid for structure, images from any source embedded actively, a deletion-first discipline with a complexity budget), design for reuse only when the reuse case is concrete, conclusion-first output, and a delivery checklist for anything actionable — copy-pasteable commands and acceptance criteria, plus known pitfalls and a rollback plan when the blast radius is large — with unverified commands marked as such.
 
-**本机操作约定（Linux）— Local machine conventions**: downloads through Motrix rather than curl/wget, batch and audit artifacts under `/tmp/<task>/`, safe process killing, and root commands through `pkexec` instead of handing the user terminal commands.
+**本机操作约定（Linux）— Local machine conventions**: downloads through Motrix rather than curl/wget, the local jev judgment stack, batch and audit artifacts under `/tmp/<task>/`, safe process killing, root commands through `pkexec` instead of handing the user terminal commands, and never-bypass gates (the pre-push gate and security-hook blocks).
 
 **边界 — Boundaries**: privacy and data sovereignty — including "reading is sending": anything read into context travels to the model provider, so print key names or hashes, never values — plus attribution, and no environment-specific claims in shareable artifacts.
 

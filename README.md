@@ -2,7 +2,7 @@
 
 ## Hi There 👋
 
-I build tooling around AI coding agents and Linux-first desktop apps. Most of my repos start as "scratch my own itch" projects that grow into something reusable — if we met here, then it is our fate.
+I'm **climashscape**, and I run the **Ch'iVerve** universe — landscape design meets AI agent tooling. Most of my repos start as "scratch my own itch" projects that grow into something reusable — if we met here, then it is our fate.
 
 ![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![](https://img.shields.io/badge/Rust-DEA584?logo=rust&logoColor=black)
@@ -16,7 +16,7 @@ I build tooling around AI coding agents and Linux-first desktop apps. Most of my
 ![](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white)
 ![](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=black)
 
-[![](https://img.shields.io/badge/RedNote-Ch%27iVerve-FF2442?logo=xiaohongshu&logoColor=white)](https://www.xiaohongshu.com/user/profile/6413017d0000000014012782)
+[![](https://img.shields.io/badge/Ch%27iVerve-RedNote-FF2442?logo=xiaohongshu&logoColor=white)](https://www.xiaohongshu.com/user/profile/6413017d0000000014012782)
 
 🏆 2025 CHSLA · 2025 WLA Shortlist · 2026 首都市民花园周
 

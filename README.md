@@ -16,6 +16,8 @@ I build tooling around AI coding agents and Linux-first desktop apps. Most of my
 ![](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white)
 ![](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=black)
 
+[![](https://img.shields.io/badge/RedNote-Ch%27iVerve-FF2442?logo=xiaohongshu&logoColor=white)](https://www.xiaohongshu.com/user/profile/6413017d0000000014012782)
+
 🏆 2025 CHSLA · 2025 WLA Shortlist · 2026 首都市民花园周
 
 </div>

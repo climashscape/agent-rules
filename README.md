@@ -2,7 +2,7 @@
 
 ## Hi There 👋
 
-I'm **climashscape**, and I run the **Ch'iVerve** universe — landscape design meets AI agent tooling. Most of my repos start as "scratch my own itch" projects that grow into something reusable — if we met here, then it is our fate.
+I'm **climashscape**. I build AI agent tooling and open-source desktop apps, and do landscape design as **Ch'iVerve**. Most of my repos start as "scratch my own itch" projects that grow into something reusable — if we met here, then it is our fate.
 
 ![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![](https://img.shields.io/badge/Rust-DEA584?logo=rust&logoColor=black)

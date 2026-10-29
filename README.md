@@ -2,7 +2,7 @@
 
 ## Hi There 👋
 
-I'm **climashscape**, founder of **Ch'iVerve** — my personal brand. Under it I build AI agent tooling, open-source desktop apps, and landscape design. Most of my repos start as "scratch my own itch" projects that grow into something reusable — if we met here, then it is our fate.
+I'm **climashscape**（甯）, founder of **Ch'iVerve** — my personal brand. Under it I build AI agent tooling, open-source desktop apps, and landscape design. Most of my repos start as "scratch my own itch" projects that grow into something reusable — if we met here, then it is our fate. Under it I build AI agent tooling, open-source desktop apps, and landscape design. Most of my repos start as "scratch my own itch" projects that grow into something reusable — if we met here, then it is our fate.
 
 ![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![](https://img.shields.io/badge/Rust-DEA584?logo=rust&logoColor=black)

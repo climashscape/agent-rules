@@ -17,6 +17,8 @@ I'm **climashscape**, founder of **Ch'iVerve** — my personal brand. Under it I
 ![](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=black)
 
 [![](https://img.shields.io/badge/Ch%27iVerve-RedNote-FF2442?logo=xiaohongshu&logoColor=white)](https://www.xiaohongshu.com/user/profile/6413017d0000000014012782)
-🏆 [2025 CHSLA](http://www.chsla.org.cn) · [2025 WLA Shortlist](https://awards.worldlandscapearchitect.com/2025-student-award-winners) · [2026 首都市民花园周](https://yllhj.beijing.gov.cn/ztxx/jcyyshj/djsh/202604/t20260429_4621450.shtml)
+[![](https://img.shields.io/badge/2025_CHSLA-2E7D32)](http://www.chsla.org.cn)
+[![](https://img.shields.io/badge/2025_WLA_Shortlist-00695C)](https://awards.worldlandscapearchitect.com/2025-student-award-winners)
+[![](https://img.shields.io/badge/2026_首都市民花园周-6A1B9A)](https://yllhj.beijing.gov.cn/ztxx/jcyyshj/djsh/202604/t20260429_4621450.shtml)
 
 </div>
